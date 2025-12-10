@@ -1,0 +1,397 @@
+[
+  {
+    "id": 1,
+    "category": "Jar Cakes",
+    "name": "Assorted Jar Cakes",
+    "variants": [
+      { "label": "Each", "price": 70 }
+    ],
+    "flavours": [
+      { "label": "Pineapple" },
+      { "label": "Chocolate" },
+      { "label": "Butterscotch" },
+      { "label": "Blueberry" },
+      { "label": "Truffle" },
+      { "label": "Fruit" },
+      { "label": "Black Forest" }
+    ],
+    "description": "Small jar cakes in assorted flavours — perfect as a single-serve treat.",
+    "image": "https://images.unsplash.com/photo-1630060247756-d122e950ac87?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+
+  {
+    "id": 2,
+    "category": "Cakes",
+    "name": "EggLess Cakes",
+    "variants": [
+      { "label": "250g", "price": 275 },
+      { "label": "500g", "price": 500 },
+      { "label": "1kg", "price": 900 },
+      { "label": "2kg", "price": 1700 }
+    ],
+    "flavours": [
+      { "label": "Butterscotch" },
+      { "label": "Pineapple" },
+      { "label": "Mix Fruit" },
+      { "label": "Funfetti Vanilla" },
+      { "label": "Blueberry" },
+      { "label": "Tutti Frutti" },
+      { "label": "Chocolate Truffle" },
+      { "label": "Black Forest" },
+      { "label": "Specialty (Mawa / Kalakand / Coconut)" },
+      { "label": "Custom Design (Theme / Photo Cake)" }
+    ],
+    "description": "Soft, fresh cakes for every celebration. Choose your favourite flavour and weight — eggless options available.",
+    "image": "https://images.unsplash.com/photo-1659271940584-25589f320198?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+
+  {
+    "id": 5,
+    "category": "Pastry",
+    "name": "Pastry (Chocolate)",
+    "variants": [
+      { "label": "Each", "price": 50 }
+    ],
+    "description": "Freshly baked chocolate pastry — ideal for quick treats and small orders.",
+    "image": "https://images.unsplash.com/photo-1550948390-c0893b20f9f3"
+  },
+
+  {
+    "id": 6,
+    "category": "Pastry",
+    "name": "Pastry (Other Flavours)",
+    "variants": [
+      { "label": "Each", "price": 40 }
+    ],
+    "flavours": [
+      { "label": "Vanilla" },
+      { "label": "Strawberry" },
+      { "label": "Pineapple" },
+      { "label": "Butterscotch" }
+    ],
+    "description": "Assorted pastry flavours — light, creamy and perfect with tea.",
+    "image": "https://images.unsplash.com/photo-1542831371-d531d36971e6"
+  },
+
+  {
+    "id": 7,
+    "category": "Cakes",
+    "name": "Bento Cakes",
+    "variants": [
+      { "label": "250g", "price": 300 },
+      { "label": "500g", "price": 570 },
+      { "label": "1kg", "price": 1080 }
+    ],
+    "flavours": [
+      { "label": "Chocolate" },
+      { "label": "Vanilla" },
+      { "label": "Red Velvet" }
+    ],
+    "description": "Cute mini bento cakes for personal celebrations — add a short message on top.",
+    "image": "https://images.unsplash.com/photo-1659679120544-1a968f3003f6?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+
+  {
+    "id": 8,
+    "category": "Namkeen",
+    "name": "Mathri & Festive Mix",
+    "variants": [
+      { "label": "250g", "price": 95 },
+      { "label": "500g", "price": 185 },
+      { "label": "1kg", "price": 350 },
+      { "label": "2kg", "price": 665 }
+    ],
+    "flavours": [
+      { "label": "Plain Mathri" },
+      { "label": "Methi Mathri" },
+      { "label": "Namakpara" },
+      { "label": "Crispy Papdi" }
+    ],
+    "description": "Classic savoury bites — perfect for festivals, travel and evening tea.",
+    "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141"
+  },
+
+  {
+    "id": 9,
+    "category": "Namkeen",
+    "name": "Poha Namkeen",
+    "variants": [
+      { "label": "250g", "price": 85 },
+      { "label": "500g", "price": 170 },
+      { "label": "1kg", "price": 340 },
+      { "label": "2kg", "price": 646 }
+    ],
+    "description": "Light and crispy poha-based namkeen — a regional favourite.",
+    "image": "https://images.unsplash.com/photo-1604908177228-6c6d0f2b3e1f"
+  },
+
+  {
+    "id": 10,
+    "category": "Namkeen",
+    "name": "Suji Special Namkeen",
+    "variants": [
+      { "label": "250g", "price": 95 },
+      { "label": "500g", "price": 190 },
+      { "label": "1kg", "price": 380 },
+      { "label": "2kg", "price": 722 }
+    ],
+    "flavours": [
+      { "label": "Peri Peri" },
+      { "label": "Cheese" },
+      { "label": "Masala" }
+    ],
+    "description": "Flavoured suji-based namkeen — spicy, cheesy and full of crunch.",
+    "image": "https://images.unsplash.com/photo-1568605114967-8130f3a36994"
+  },
+
+  {
+    "id": 11,
+    "category": "Namkeen",
+    "name": "Jaggery Pare",
+    "variants": [
+      { "label": "250g", "price": 95 },
+      { "label": "500g", "price": 190 },
+      { "label": "1kg", "price": 380 },
+      { "label": "2kg", "price": 722 }
+    ],
+    "description": "Sweet and crunchy jaggery-coated pare — traditional festive snack.",
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587"
+  },
+
+  {
+    "id": 12,
+    "category": "Namkeen",
+    "name": "Besan Sev",
+    "variants": [
+      { "label": "250g", "price": 85 },
+      { "label": "500g", "price": 170 },
+      { "label": "1kg", "price": 340 },
+      { "label": "2kg", "price": 646 }
+    ],
+    "description": "Crispy besan sev — classic topping for chaat and snacks.",
+    "image": "https://images.unsplash.com/photo-1572448862523-3e0b6b8eea3b"
+  },
+
+  {
+    "id": 13,
+    "category": "Sweets (Ladoo)",
+    "name": "Dryfruit Ladoo",
+    "variants": [
+      { "label": "250g", "price": 325 },
+      { "label": "500g", "price": 650 },
+      { "label": "1kg", "price": 1300 },
+      { "label": "2kg", "price": 2470 }
+    ],
+    "flavours": [
+      { "label": "Mixed Dryfruit" },
+      { "label": "Kaju Rich" },
+      { "label": "Almond Rich" }
+    ],
+    "description": "Laddoos made with premium dry fruits — rich, nutritious and indulgent.",
+    "image": "https://images.unsplash.com/photo-1551218808-94e220e084d2"
+  },
+
+  {
+    "id": 14,
+    "category": "Sweets (Ladoo)",
+    "name": "Besan Ladoo",
+    "variants": [
+      { "label": "250g", "price": 140 },
+      { "label": "500g", "price": 275 },
+      { "label": "1kg", "price": 550 },
+      { "label": "2kg", "price": 1045 }
+    ],
+    "description": "Traditional besan ladoo with pure ghee — melt-in-mouth texture.",
+    "image": "https://images.unsplash.com/photo-1604908177228-bf9b0f8a7b3c"
+  },
+
+  {
+    "id": 15,
+    "category": "Sweets (Ladoo)",
+    "name": "Nariyal Ladoo",
+    "variants": [
+      { "label": "250g", "price": 125 },
+      { "label": "500g", "price": 250 },
+      { "label": "1kg", "price": 500 },
+      { "label": "2kg", "price": 950 }
+    ],
+    "description": "Coconut ladoos made with fresh coconut and sweeteners.",
+    "image": "https://images.unsplash.com/photo-1589308078055-5550c2a7a1d8"
+  },
+
+  {
+    "id": 16,
+    "category": "Sweets (Ladoo)",
+    "name": "Til / Sesame Ladoo",
+    "variants": [
+      { "label": "250g", "price": 125 },
+      { "label": "500g", "price": 250 },
+      { "label": "1kg", "price": 500 },
+      { "label": "2kg", "price": 950 }
+    ],
+    "description": "Healthy sesame laddoos — lightly sweet, packed with energy.",
+    "image": "https://images.unsplash.com/photo-1604908177228-c2f55f1f6a7f"
+  },
+
+  {
+    "id": 17,
+    "category": "Sweets",
+    "name": "Aata Ladoo",
+    "variants": [
+      { "label": "250g", "price": 250 },
+      { "label": "500g", "price": 375 },
+      { "label": "1kg", "price": 500 },
+      { "label": "2kg", "price": 950 }
+    ],
+    "description": "Wholesome wheat laddoos — lightly sweetened and nourishing.",
+    "image": "https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b"
+  },
+
+  {
+    "id": 18,
+    "category": "Sweets",
+    "name": "Thekua",
+    "variants": [
+      { "label": "500g", "price": 275 },
+      { "label": "1kg", "price": 500 },
+      { "label": "2kg", "price": 950 }
+    ],
+    "description": "Traditional crunchy thekua — classic festival sweet from eastern India.",
+    "image": "https://images.unsplash.com/photo-1599785209799-6d3f7b3cc6e1"
+  },
+
+  {
+    "id": 19,
+    "category": "Sweets",
+    "name": "Gujia (Mawa)",
+    "variants": [
+      { "label": "500g", "price": 380 },
+      { "label": "1kg", "price": 750 },
+      { "label": "2kg", "price": 1425 }
+    ],
+    "description": "Stuffed mawa gujias — rich and perfect for festive gifting.",
+    "image": "https://images.unsplash.com/photo-1604908177228-8c8bb4b4f8a5"
+  },
+
+  {
+    "id": 20,
+    "category": "Cookies",
+    "name": "Premium Cookies",
+    "variants": [
+      { "label": "250g", "price": 180 },
+      { "label": "500g", "price": 340 },
+      { "label": "1kg", "price": 650 }
+    ],
+    "flavours": [
+      { "label": "Aata" },
+      { "label": "Almond" },
+      { "label": "Kaju" },
+      { "label": "Pista" }
+    ],
+    "description": "Buttery cookies available in aata, almond, kaju, pista and more.",
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587"
+  },
+
+  {
+    "id": 21,
+    "category": "Dry Cakes & Misc",
+    "name": "Dry Cakes (Assorted)",
+    "variants": [
+      { "label": "250g", "price": 160 },
+      { "label": "500g", "price": 300 },
+      { "label": "1kg", "price": 580 }
+    ],
+    "flavours": [
+      { "label": "Vanilla" },
+      { "label": "Marble" },
+      { "label": "Chocolate" },
+      { "label": "Fruit" }
+    ],
+    "description": "Assorted dry cakes — long shelf-life, great for gifting and tea-time.",
+    "image": "https://images.unsplash.com/photo-1542444459-db9b4badf7b8"
+  },
+
+  {
+    "id": 23,
+    "category": "Sweets",
+    "name": "Healthy & Sugar-Free Ladoo",
+    "variants": [
+      { "label": "250g", "price": 220 },
+      { "label": "500g", "price": 420 },
+      { "label": "1kg", "price": 800 }
+    ],
+    "flavours": [
+      { "label": "Churma" },
+      { "label": "Khajoor" },
+      { "label": "Sugar-Free Dryfruit" }
+    ],
+    "description": "Speciality ladoos including sugar-free and dryfruit options — perfect for health-conscious gifting.",
+    "image": "https://images.unsplash.com/photo-1551218808-94e220e084d2"
+  },
+
+  {
+    "id": 24,
+    "category": "Sweets",
+    "name": "Barfi & Chocolate Bites",
+    "variants": [
+      { "label": "250g", "price": 240 },
+      { "label": "500g", "price": 460 },
+      { "label": "1kg", "price": 880 }
+    ],
+    "flavours": [
+      { "label": "White Chocolate" },
+      { "label": "Rasmalai" },
+      { "label": "Tutti Frutti" },
+      { "label": "Chocolate Bounty Balls" }
+    ],
+    "description": "Assorted barfis and special chocolate treats — premium ingredients and attractive presentation.",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947"
+  },
+
+  {
+    "id": 25,
+    "category": "Savory Snacks",
+    "name": "Assorted Mixed Namkeen Packs",
+    "variants": [
+      { "label": "250g", "price": 110 },
+      { "label": "500g", "price": 210 },
+      { "label": "1kg", "price": 400 }
+    ],
+    "description": "Mix of popular namkeen varieties packaged fresh; perfect for parties and snacking.",
+    "image": "https://images.unsplash.com/photo-1568605114967-8130f3a36994"
+  },
+
+  {
+    "id": 27,
+    "category": "Cookies",
+    "name": "Tea-Time Cookies",
+    "variants": [
+      { "label": "250g", "price": 150 },
+      { "label": "500g", "price": 280 },
+      { "label": "1kg", "price": 540 }
+    ],
+    "flavours": [
+      { "label": "Marble" },
+      { "label": "Pineapple" },
+      { "label": "Orange" },
+      { "label": "Ajwain" }
+    ],
+    "description": "Classic cookies in multiple flavours — perfect with evening tea.",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947"
+  },
+
+  {
+    "id": 28,
+    "category": "Misc & Gift Packs",
+    "name": "Assorted Gift Box",
+    "variants": [
+      { "label": "Small (approx 500g)", "price": 520 },
+      { "label": "Medium (approx 1kg)", "price": 980 },
+      { "label": "Large (approx 2kg)", "price": 1850 }
+    ],
+    "description": "Curated gift boxes with mixed sweets, cookies and snacks — great for corporate gifting and festivals.",
+    "image": "https://images.unsplash.com/photo-1542831371-d531d36971e6"
+  }
+]
+
+    
