@@ -2,7 +2,7 @@
   {
     "id": 1,
     "category": "Jar Cakes",
-    "name": "Assorted Jar Cakes",
+    "name": "Jar Cakes",
     "variants": [
       { "label": "Each", "price": 70 }
     ],
@@ -15,7 +15,7 @@
       { "label": "Fruit" },
       { "label": "Black Forest" }
     ],
-    "description": "Small jar cakes in assorted flavours — perfect as a single-serve treat.",
+    "description": "Assorted Small jar cakes in assorted flavours — perfect as a single-serve treat.",
     "image": "https://images.unsplash.com/photo-1630060247756-d122e950ac87?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
 
@@ -46,20 +46,9 @@
   },
 
   {
-    "id": 5,
-    "category": "Pastry",
-    "name": "Pastry (Chocolate)",
-    "variants": [
-      { "label": "Each", "price": 50 }
-    ],
-    "description": "Freshly baked chocolate pastry — ideal for quick treats and small orders.",
-    "image": "https://images.unsplash.com/photo-1550948390-c0893b20f9f3"
-  },
-
-  {
     "id": 6,
     "category": "Pastry",
-    "name": "Pastry (Other Flavours)",
+    "name": "Pastries",
     "variants": [
       { "label": "Each", "price": 40 }
     ],
@@ -67,6 +56,7 @@
       { "label": "Vanilla" },
       { "label": "Strawberry" },
       { "label": "Pineapple" },
+      { "label": "Chocolate" },
       { "label": "Butterscotch" }
     ],
     "description": "Assorted pastry flavours — light, creamy and perfect with tea.",
@@ -295,7 +285,7 @@
   {
     "id": 21,
     "category": "Dry Cakes & Misc",
-    "name": "Dry Cakes (Assorted)",
+    "name": "Dry Cakes",
     "variants": [
       { "label": "250g", "price": 160 },
       { "label": "500g", "price": 300 },

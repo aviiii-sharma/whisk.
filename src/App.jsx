@@ -24,7 +24,7 @@ export const CATEGORY_CONFIG = [
     id: "cakes",
     label: "Cakes & Jar Cakes",
     description: "Birthday cakes, jar cakes, bento cakes & more.",
-    matchCategories: ["Cakes", "Jar Cakes", "Custom Cakes", "Dry Cakes & Misc", "Specials"]
+    matchCategories: ["Cakes", "Pastry","Jar Cakes", "Custom Cakes", "Dry Cakes & Misc", "Specials"]
   },
   {
     id: "sweets",
