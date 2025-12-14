@@ -497,6 +497,140 @@ body {
   color: #777;
 }
 
+.carousel-image {
+  width: 100%;
+  height: 290px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 14px;
+  position: relative;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffffffcc;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.carousel-btn.left {
+  left: 10px;
+}
+
+.carousel-btn.right {
+  right: 10px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  gap: 6px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #ff6b35;
+}
+
+/* Image wrapper for stacking */
+.card-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* Both layers */
+.card-img-wrapper .card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 14px;
+  transition: opacity 0.35s linear;  /* PURE FADE */
+}
+
+/* Base image (always visible under hover image) */
+.card-img-wrapper .base {
+  opacity: 1;
+}
+
+/* Hover image — starts hidden */
+.card-img-wrapper .hover-img {
+  opacity: 0;
+}
+
+/* Hover activates crossfade */
+.menu-card:hover .hover-img {
+  opacity: 1;
+}
+
+.menu-card:hover .base {
+  opacity: 0;
+}
+
+/* -------- Scrollable / Swipeable Carousel -------- */
+
+.carousel-scroll-container {
+  width: 100%;
+  height: 300px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  scroll-behavior: smooth;
+}
+
+.carousel-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-image-slide {
+  min-width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 14px;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+}
+
+/* Dots */
+.carousel-dots {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #ff6b35;
+}
+
 
 /* --- Responsive --- */
 @media (max-width: 900px) {

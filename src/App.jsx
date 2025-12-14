@@ -46,7 +46,7 @@ export const CATEGORY_CONFIG = [
   },
   {
     id: "gifts",
-    label: "Gift Packs",
+    label: "Custom Cakes & Gift Packs",
     description: "Curated boxes for festivals & occasions.",
     matchCategories: ["Misc & Gift Packs"]
   }

@@ -16,7 +16,11 @@
       { "label": "Black Forest" }
     ],
     "description": "Assorted Small jar cakes in assorted flavours — perfect as a single-serve treat.",
-    "image": "https://images.unsplash.com/photo-1630060247756-d122e950ac87?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "images": [
+      "/items/mixfruit-jarcake.jpeg",
+      "/items/jar-cake.jpeg"
+        
+    ]
   },
 
   {
@@ -42,7 +46,28 @@
       { "label": "Custom Design (Theme / Photo Cake)" }
     ],
     "description": "Soft, fresh cakes for every celebration. Choose your favourite flavour and weight — eggless options available.",
-    "image": "https://images.unsplash.com/photo-1659271940584-25589f320198?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "images": [
+      "/items/pineapple-cake.jpeg",
+      "/items/chocolate-cake.jpeg",
+      "/items/truffle-cake.jpeg",
+      "/items/cake.jpeg",
+      "/items/cake2.jpeg",
+      "/items/blackforest-cake.jpeg",
+      "/items/fruit-cake.jpeg"
+    ] 
+  },
+  {
+    "id": 3,
+    "category": "Cakes",
+    "name": "Brownie",
+    "variants": [
+      { "label": "Each", "price": 40 }
+    ],
+    "flavours": [
+      { "label": "Classic Chocolate" }
+    ],
+    "description": "Rich and fudgy brownies — perfect for chocolate lovers.",
+    "image": "/items/brownie.jpeg"
   },
 
   {
@@ -60,7 +85,11 @@
       { "label": "Butterscotch" }
     ],
     "description": "Assorted pastry flavours — light, creamy and perfect with tea.",
-    "image": "https://images.unsplash.com/photo-1542831371-d531d36971e6"
+    "images": [
+      "/items/chocolate-pastry.jpeg",
+      "/items/rainbow-pastry.jpeg",
+      "/items/mangococonut-pastry.jpeg"
+    ]
   },
 
   {
@@ -78,7 +107,7 @@
       { "label": "Red Velvet" }
     ],
     "description": "Cute mini bento cakes for personal celebrations — add a short message on top.",
-    "image": "https://images.unsplash.com/photo-1659679120544-1a968f3003f6?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "/items/bento-cake.jpeg"
   },
 
   {
@@ -298,7 +327,7 @@
       { "label": "Fruit" }
     ],
     "description": "Assorted dry cakes — long shelf-life, great for gifting and tea-time.",
-    "image": "https://images.unsplash.com/photo-1542444459-db9b4badf7b8"
+    "image": "/items/tuttyfruity-drycake.jpeg"
   },
 
   {
