@@ -207,7 +207,7 @@
       { "label": "Almond Rich" }
     ],
     "description": "Laddoos made with premium dry fruits — rich, nutritious and indulgent.",
-    "image": "https://images.unsplash.com/photo-1551218808-94e220e084d2"
+    "image": "/items/dryfruit-laddoo.jpeg"
   },
 
   {
@@ -221,7 +221,7 @@
       { "label": "2kg", "price": 1045 }
     ],
     "description": "Traditional besan ladoo with pure ghee — melt-in-mouth texture.",
-    "image": "https://images.unsplash.com/photo-1604908177228-bf9b0f8a7b3c"
+    "image": "/items/besan-laddoo.jpeg"
   },
 
   {
@@ -235,7 +235,7 @@
       { "label": "2kg", "price": 950 }
     ],
     "description": "Coconut ladoos made with fresh coconut and sweeteners.",
-    "image": "https://images.unsplash.com/photo-1589308078055-5550c2a7a1d8"
+    "image": "/items/nariyal-laddoo.jpg"
   },
 
   {
@@ -249,7 +249,7 @@
       { "label": "2kg", "price": 950 }
     ],
     "description": "Healthy sesame laddoos — lightly sweet, packed with energy.",
-    "image": "https://images.unsplash.com/photo-1604908177228-c2f55f1f6a7f"
+    "image": "/items/tilmawa-laddoo.jpeg"
   },
 
   {
@@ -263,7 +263,7 @@
       { "label": "2kg", "price": 950 }
     ],
     "description": "Wholesome wheat laddoos — lightly sweetened and nourishing.",
-    "image": "https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b"
+    "image": "/items/aata-laddoo.jpeg"
   },
 
   {
@@ -276,7 +276,7 @@
       { "label": "2kg", "price": 950 }
     ],
     "description": "Traditional crunchy thekua — classic festival sweet from eastern India.",
-    "image": "https://images.unsplash.com/photo-1599785209799-6d3f7b3cc6e1"
+    "image": "/items/thekua.jpeg"
   },
 
   {
@@ -289,7 +289,7 @@
       { "label": "2kg", "price": 1425 }
     ],
     "description": "Stuffed mawa gujias — rich and perfect for festive gifting.",
-    "image": "https://images.unsplash.com/photo-1604908177228-8c8bb4b4f8a5"
+    "image": "/items/gujiya.jpeg"
   },
 
   {
@@ -308,7 +308,7 @@
       { "label": "Pista" }
     ],
     "description": "Buttery cookies available in aata, almond, kaju, pista and more.",
-    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587"
+    "image": "/items/premium-cookies.jpeg"
   },
 
   {
@@ -345,7 +345,7 @@
       { "label": "Sugar-Free Dryfruit" }
     ],
     "description": "Speciality ladoos including sugar-free and dryfruit options — perfect for health-conscious gifting.",
-    "image": "https://images.unsplash.com/photo-1551218808-94e220e084d2"
+    "image": "/items/sugarfree-laddoo.jpeg"
   },
 
   {
@@ -364,7 +364,14 @@
       { "label": "Chocolate Bounty Balls" }
     ],
     "description": "Assorted barfis and special chocolate treats — premium ingredients and attractive presentation.",
-    "image": "https://images.unsplash.com/photo-1544025162-d76694265947"
+    "images": [
+      "/items/chocoballs.jpeg",
+      "/items/chocolate.jpeg",
+      "/items/homemade-chocolate.jpeg",
+      "/items/homemade-chocolate2.jpeg",
+      "/items/homemade-chocolate3.jpeg",
+      "/items/homemade-chocolate4.jpeg"
+    ]
   },
 
   {
@@ -396,7 +403,10 @@
       { "label": "Ajwain" }
     ],
     "description": "Classic cookies in multiple flavours — perfect with evening tea.",
-    "image": "https://images.unsplash.com/photo-1544025162-d76694265947"
+    "images": [
+      "/items/teatime-cookies.jpeg",
+      "/items/teatime-cookies2.jpeg"
+    ] 
   },
 
   {
