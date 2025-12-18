@@ -18,8 +18,7 @@
     "description": "Assorted Small jar cakes in assorted flavours — perfect as a single-serve treat.",
     "images": [
       "/items/mixfruit-jarcake.jpeg",
-      "/items/jar-cake.jpeg"
-        
+      "/items/jar-cake.jpeg" 
     ]
   },
 
@@ -71,7 +70,7 @@
   },
 
   {
-    "id": 6,
+    "id": 4,
     "category": "Pastry",
     "name": "Pastries",
     "variants": [
@@ -93,7 +92,7 @@
   },
 
   {
-    "id": 7,
+    "id": 5,
     "category": "Cakes",
     "name": "Bento Cakes",
     "variants": [
@@ -111,9 +110,9 @@
   },
 
   {
-    "id": 8,
+    "id": 6,
     "category": "Namkeen",
-    "name": "Mathri & Festive Mix",
+    "name": "Mathri",
     "variants": [
       { "label": "250g", "price": 95 },
       { "label": "500g", "price": 185 },
@@ -121,17 +120,19 @@
       { "label": "2kg", "price": 665 }
     ],
     "flavours": [
+      { "label": "Crispy Mathri" },
       { "label": "Plain Mathri" },
-      { "label": "Methi Mathri" },
-      { "label": "Namakpara" },
-      { "label": "Crispy Papdi" }
+      { "label": "Methi Mathri" }
     ],
     "description": "Classic savoury bites — perfect for festivals, travel and evening tea.",
-    "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141"
+    "images": [
+      "/items/crispy-mathri.jpeg",
+      "/items/methikalimirch-mathri.jpeg"
+    ]
   },
 
   {
-    "id": 9,
+    "id": 7,
     "category": "Namkeen",
     "name": "Poha Namkeen",
     "variants": [
@@ -141,30 +142,11 @@
       { "label": "2kg", "price": 646 }
     ],
     "description": "Light and crispy poha-based namkeen — a regional favourite.",
-    "image": "https://images.unsplash.com/photo-1604908177228-6c6d0f2b3e1f"
+    "image": "/items/poha-namkeen.jpeg"
   },
 
   {
-    "id": 10,
-    "category": "Namkeen",
-    "name": "Suji Special Namkeen",
-    "variants": [
-      { "label": "250g", "price": 95 },
-      { "label": "500g", "price": 190 },
-      { "label": "1kg", "price": 380 },
-      { "label": "2kg", "price": 722 }
-    ],
-    "flavours": [
-      { "label": "Peri Peri" },
-      { "label": "Cheese" },
-      { "label": "Masala" }
-    ],
-    "description": "Flavoured suji-based namkeen — spicy, cheesy and full of crunch.",
-    "image": "https://images.unsplash.com/photo-1568605114967-8130f3a36994"
-  },
-
-  {
-    "id": 11,
+    "id": 8,
     "category": "Namkeen",
     "name": "Jaggery Pare",
     "variants": [
@@ -174,11 +156,11 @@
       { "label": "2kg", "price": 722 }
     ],
     "description": "Sweet and crunchy jaggery-coated pare — traditional festive snack.",
-    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587"
+    "image": "/items/jaggery-pare.jpeg"
   },
 
   {
-    "id": 12,
+    "id": 9,
     "category": "Namkeen",
     "name": "Besan Sev",
     "variants": [
@@ -188,11 +170,11 @@
       { "label": "2kg", "price": 646 }
     ],
     "description": "Crispy besan sev — classic topping for chaat and snacks.",
-    "image": "https://images.unsplash.com/photo-1572448862523-3e0b6b8eea3b"
+    "image": "/items/besan-sev.jpeg"
   },
 
   {
-    "id": 13,
+    "id": 10,
     "category": "Sweets (Ladoo)",
     "name": "Dryfruit Ladoo",
     "variants": [
@@ -211,7 +193,7 @@
   },
 
   {
-    "id": 14,
+    "id": 11,
     "category": "Sweets (Ladoo)",
     "name": "Besan Ladoo",
     "variants": [
@@ -225,7 +207,7 @@
   },
 
   {
-    "id": 15,
+    "id": 12,
     "category": "Sweets (Ladoo)",
     "name": "Nariyal Ladoo",
     "variants": [
@@ -239,7 +221,7 @@
   },
 
   {
-    "id": 16,
+    "id": 13,
     "category": "Sweets (Ladoo)",
     "name": "Til / Sesame Ladoo",
     "variants": [
@@ -253,7 +235,7 @@
   },
 
   {
-    "id": 17,
+    "id": 14,
     "category": "Sweets",
     "name": "Aata Ladoo",
     "variants": [
@@ -267,7 +249,7 @@
   },
 
   {
-    "id": 18,
+    "id": 15,
     "category": "Sweets",
     "name": "Thekua",
     "variants": [
@@ -280,7 +262,7 @@
   },
 
   {
-    "id": 19,
+    "id": 16,
     "category": "Sweets",
     "name": "Gujia (Mawa)",
     "variants": [
@@ -293,7 +275,7 @@
   },
 
   {
-    "id": 20,
+    "id": 17,
     "category": "Cookies",
     "name": "Premium Cookies",
     "variants": [
@@ -312,7 +294,7 @@
   },
 
   {
-    "id": 21,
+    "id": 18,
     "category": "Dry Cakes & Misc",
     "name": "Dry Cakes",
     "variants": [
@@ -331,7 +313,7 @@
   },
 
   {
-    "id": 23,
+    "id": 19,
     "category": "Sweets",
     "name": "Healthy & Sugar-Free Ladoo",
     "variants": [
@@ -349,7 +331,7 @@
   },
 
   {
-    "id": 24,
+    "id": 20,
     "category": "Sweets",
     "name": "Barfi & Chocolate Bites",
     "variants": [
@@ -375,20 +357,7 @@
   },
 
   {
-    "id": 25,
-    "category": "Savory Snacks",
-    "name": "Assorted Mixed Namkeen Packs",
-    "variants": [
-      { "label": "250g", "price": 110 },
-      { "label": "500g", "price": 210 },
-      { "label": "1kg", "price": 400 }
-    ],
-    "description": "Mix of popular namkeen varieties packaged fresh; perfect for parties and snacking.",
-    "image": "https://images.unsplash.com/photo-1568605114967-8130f3a36994"
-  },
-
-  {
-    "id": 27,
+    "id": 21,
     "category": "Cookies",
     "name": "Tea-Time Cookies",
     "variants": [
@@ -410,7 +379,7 @@
   },
 
   {
-    "id": 28,
+    "id": 22,
     "category": "Misc & Gift Packs",
     "name": "Assorted Gift Box",
     "variants": [
@@ -420,6 +389,64 @@
     ],
     "description": "Curated gift boxes with mixed sweets, cookies and snacks — great for corporate gifting and festivals.",
     "image": "https://images.unsplash.com/photo-1542831371-d531d36971e6"
+  },
+  {
+    "id": 23,
+    "category": "Namkeen",
+    "name": "Diet Namkeen",
+    "variants": [
+      { "label": "250g", "price": 85 },
+      { "label": "500g", "price": 170 },
+      { "label": "1kg", "price": 340 },
+      { "label": "2kg", "price": 646 }
+    ],
+    "description": "Light and crispy poha-based namkeen — a regional favourite.",
+    "images": [
+      "/items/diet-namkeen.jpeg",
+      "/items/diet-namkeen2.jpeg"
+    ]
+  },
+  {
+    "id": 24,
+    "category": "Namkeen",
+    "name": "Masala Peanut",
+    "variants": [
+      { "label": "250g", "price": 85 },
+      { "label": "500g", "price": 170 },
+      { "label": "1kg", "price": 340 },
+      { "label": "2kg", "price": 646 }
+    ],
+    "description": "Light and crispy poha-based namkeen — a regional favourite.",
+    "image": "/items/masala-besan-penut.jpeg"
+  },
+  {
+    "id": 25,
+    "category": "Namkeen",
+    "name": "CornFlake Namkeen",
+    "variants": [
+      { "label": "250g", "price": 85 },
+      { "label": "500g", "price": 170 },
+      { "label": "1kg", "price": 340 },
+      { "label": "2kg", "price": 646 }
+    ],
+    "description": "Light and crispy poha-based namkeen — a regional favourite.",
+    "images": [
+      "/items/khattameetha-cornflake-dryfruit-namkeen.jpeg",
+      "/items/dryfruit-cornflake-namkeen.jpeg"
+    ]
+  },
+  {
+    "id": 26,
+    "category": "Namkeen",
+    "name": "Nachos",
+    "variants": [
+      { "label": "250g", "price": 85 },
+      { "label": "500g", "price": 170 },
+      { "label": "1kg", "price": 340 },
+      { "label": "2kg", "price": 646 }
+    ],
+    "description": "Light and crispy poha-based namkeen — a regional favourite.",
+    "image": "/items/cornchese-masala-nachos.jpeg"
   }
 ]
 
