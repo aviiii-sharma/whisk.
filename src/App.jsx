@@ -16,6 +16,14 @@ import CartDrawer from "./components/CartDrawer";
 import ItemDetail from "./components/ItemDetail";
 import ProductsPage from "./pages/ProductsPage";
 
+import {
+  Cake,
+  Candy,
+  Cookie,
+  Sandwich,
+  Gift
+} from "lucide-react";
+
 
 import menuData from "./data/menu.json";
 
@@ -27,33 +35,27 @@ export const CATEGORY_CONFIG = [
   {
     id: "cakes",
     label: "Cakes & Desserts",
-    description: "Birthday cakes, jar cakes & desserts",
+    icon: Cake,
     matchCategories: ["Cakes", "Jar Cakes", "Dry Cakes & Misc", "Specials"],
   },
   {
     id: "sweets",
     label: "Traditional Sweets",
-    description: "Ladoo, barfi & festive sweets",
+    icon: Candy,
     matchCategories: ["Sweets", "Sweets (Ladoo)"],
+  },
+   {
+    id: "namkeen",
+    label: "Namkeen & Snacks",
+    icon: Sandwich,
+    matchCategories: ["Namkeen", "Savory Snacks"],
   },
   {
     id: "cookies",
     label: "Cookies & Biscuits",
-    description: "Tea time cookies & baked snacks",
+    icon: Cookie,
     matchCategories: ["Cookies"],
-  },
-  {
-    id: "namkeen",
-    label: "Namkeen & Snacks",
-    description: "Savory & crunchy snacks",
-    matchCategories: ["Namkeen", "Savory Snacks"],
-  },
-  {
-    id: "gifts",
-    label: "Gift Packs",
-    description: "Assorted gift boxes",
-    matchCategories: ["Misc & Gift Packs"],
-  },
+  }
 ];
 
 /* ===================== APP ===================== */

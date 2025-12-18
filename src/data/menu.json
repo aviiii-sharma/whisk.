@@ -26,7 +26,7 @@
     "id": 2,
     "category": "Cakes",
     "isBestSeller": true,
-    "name": "EggLess Cakes",
+    "name": "Custom EggLess Cakes",
     "variants": [
       { "label": "250g", "price": 275 },
       { "label": "500g", "price": 500 },
@@ -49,11 +49,11 @@
     "images": [
       "/items/pineapple-cake.jpeg",
       "/items/chocolate-cake.jpeg",
+      "/items/fruit-cake.jpeg",
+      "/items/blackforest-cake.jpeg",
       "/items/truffle-cake.jpeg",
       "/items/cake.jpeg",
-      "/items/cake2.jpeg",
-      "/items/blackforest-cake.jpeg",
-      "/items/fruit-cake.jpeg"
+      "/items/cake2.jpeg"
     ] 
   },
   {

@@ -43,7 +43,7 @@ export default function MenuCard({ item }) {
 
       {/* Normal content */}
       <div className="item-header">
-        <h3>{item.name}</h3>
+        <h3 style={{ marginTop: "0.6rem" }}>{item.name}</h3>
       </div>
 
       {item.category && (

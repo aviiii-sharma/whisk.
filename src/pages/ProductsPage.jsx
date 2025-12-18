@@ -30,18 +30,24 @@ export default function ProductsPage({ menuData }) {
 
       {/* CATEGORY TABS */}
       <div className="category-tabs">
-        {CATEGORY_CONFIG.map((cat) => (
-          <button
-            key={cat.id}
-            className={
-              "category-tab " +
-              (cat.id === activeCategoryId ? "active" : "")
-            }
-            onClick={() => setActiveCategoryId(cat.id)}
-          >
-            {cat.label}
-          </button>
-        ))}
+        {CATEGORY_CONFIG.map((cat) => {
+  const Icon = cat.icon;
+
+  return (
+    <button
+      key={cat.id}
+      className={
+        "category-tab-card " +
+        (cat.id === activeCategoryId ? "active" : "")
+      }
+      onClick={() => setActiveCategoryId(cat.id)}
+    >
+      <Icon className="category-icon-svg" />
+      <span className="category-label">{cat.label}</span>
+    </button>
+  );
+})}
+
       </div>
 
       {/* PRODUCTS */}

@@ -41,10 +41,6 @@ export default function ItemDetail({ item, onBack, addToCart }) {
 
   return (
     <div className="item-detail-page">
-      {/* BACK */}
-      <button className="back-link" onClick={onBack}>
-        ← Back to menu
-      </button>
 
       <div className="item-detail-container">
         {/* LEFT: IMAGES */}
