@@ -27,6 +27,12 @@ export const CATEGORY_CONFIG = [
     matchCategories: ["Cakes", "Pastry","Jar Cakes", "Custom Cakes", "Dry Cakes & Misc", "Specials"]
   },
   {
+    id: "namkeen",
+    label: "Namkeen & Snacks",
+    description: "Crispy, savoury snacks for every mood.",
+    matchCategories: ["Namkeen", "Savory Snacks"]
+  },
+  {
     id: "sweets",
     label: "Sweets & Ladoo",
     description: "Traditional laddoos, barfi and festive sweets.",
@@ -37,12 +43,6 @@ export const CATEGORY_CONFIG = [
     label: "Cookies",
     description: "Tea-time favourites in many flavours.",
     matchCategories: ["Cookies"]
-  },
-  {
-    id: "namkeen",
-    label: "Namkeen & Snacks",
-    description: "Crispy, savoury snacks for every mood.",
-    matchCategories: ["Namkeen", "Savory Snacks"]
   },
   {
     id: "gifts",

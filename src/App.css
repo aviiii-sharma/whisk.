@@ -258,31 +258,79 @@ body {
   margin-bottom: 1.3rem;
 }
 
-.field-label {
-  display: block;
-  font-size: 0.85rem;
-  margin-bottom: 0.4rem;
-  color: #777;
+.option-block {
+  margin-bottom: 1.4rem;
 }
 
+/* ===== Interactive Option Chips ===== */
+
+/* 1. Base Styles for the button */
+.chip-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Box Model */
+  border: 1.5px solid #ddd;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  
+  /* Typography & Color */
+  background: #fff;
+  color: #333;
+  font-size: 0.85rem;
+  
+  /* Interaction */
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* 2. Hover Effect (When NOT selected) */
+/* This gives a preview of the color */
+.chip-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: #fff;
+}
+
+/* 3. Selected / Active State */
+/* FIXED: This now makes the button SOLID orange */
+.chip-selected, 
+.chip-btn-active {
+  background: var(--primary) !important;
+  color: #fff !important; /* White text for contrast */
+  border-color: var(--primary) !important;
+}
+
+/* 4. Hovering over a selected item */
+/* Optional: Makes it slightly darker or keeps it solid to show it's already active */
+.chip-selected:hover,
+.chip-btn-active:hover {
+  opacity: 0.9;
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+/* Container */
 .chip-row {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-.chip-btn {
-  border-radius: 999px;
-  padding: 0.35rem 0.9rem;
-  border: 1px solid #ddd;
-  background: #fff;
-  font-size: 0.85rem;
-  cursor: pointer;
+.option-block h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  color: #444;
+  font-weight: 600;
 }
 
-.chip-btn-active {
-  border-color: var(--primary);
-  background: rgba(255, 107, 53, 0.08);
+.field-label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+  color: #777;
 }
 
 .qty-row {
@@ -299,6 +347,49 @@ body {
   text-align: center;
 }
 
+/* ===== Quantity Pill Control ===== */
+
+.qty-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: #f5f5f5;
+  border-radius: 999px;
+  padding: 0.3rem 0.9rem;
+}
+
+.qty-action {
+  background: white;
+  border: 1px solid #ddd;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.qty-action:hover:not(:disabled) {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.qty-action:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.qty-count {
+  min-width: 22px;
+  text-align: center;
+  font-weight: 600;
+}
+
+
 .item-detail-footer {
   margin-top: 1.5rem;
   display: flex;
@@ -314,6 +405,60 @@ body {
 
 .item-detail-price strong {
   font-size: 1.3rem;
+}
+.item-detail-page {
+  padding-bottom: 90px; /* space for sticky footer */
+}
+
+.item-detail-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+  gap: 2.5rem;
+  margin-top: 1rem;
+}
+
+.item-info-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.6rem;
+  box-shadow: var(--shadow);
+}
+
+.item-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.item-category-pill {
+  font-size: 0.7rem;
+  background: rgba(255, 107, 53, 0.1);
+  color: var(--primary);
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0 1.2rem;
+  padding: 0.8rem 1rem;
+  background: #fafafa;
+  border-radius: 12px;
+}
+
+.price-label {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.price-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--secondary);
 }
 
 /* --- Cart Drawer (Overlay) --- */
@@ -611,6 +756,31 @@ body {
   scroll-snap-align: center;
 }
 
+.smooth-carousel {
+  width: 100%;
+  height: 320px;
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+}
+
+.smooth-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.smooth-slide {
+  min-width: 100%;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  scroll-snap-align: center;
+  flex-shrink: 0;
+}
+
 /* Dots */
 .carousel-dots {
   margin-top: 10px;
@@ -638,9 +808,16 @@ body {
     font-size: 2.3rem;
   }
 
-  .item-detail-layout {
-    grid-template-columns: 1fr;
-  }
+  .item-detail-container {
+  grid-template-columns: 1fr;
+}
+
+.item-info-card {
+  box-shadow: none;
+  padding: 1.2rem 0;
+  background: transparent;
+}
+
 
   .card-img-placeholder.large {
     padding-top: 65%;
@@ -660,3 +837,31 @@ body {
     padding: 1.2rem;
   }
 }
+
+/* ===== Sticky Add to Cart Footer ===== */
+
+.item-detail-footer-sticky {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--white);
+  border-top: 1px solid #eee;
+  padding: 0.9rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  z-index: 90;
+  box-shadow: 0 -6px 20px rgba(0,0,0,0.08);
+}
+
+.item-detail-footer-sticky span {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.item-detail-footer-sticky strong {
+  font-size: 1.2rem;
+}
+

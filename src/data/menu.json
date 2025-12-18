@@ -347,12 +347,12 @@
     ],
     "description": "Assorted barfis and special chocolate treats — premium ingredients and attractive presentation.",
     "images": [
-      "/items/chocoballs.jpeg",
+      "/items/homemade-chocolate4.jpeg",
       "/items/chocolate.jpeg",
-      "/items/homemade-chocolate.jpeg",
-      "/items/homemade-chocolate2.jpeg",
       "/items/homemade-chocolate3.jpeg",
-      "/items/homemade-chocolate4.jpeg"
+      "/items/chocoballs.jpeg",
+      "/items/homemade-chocolate2.jpeg",
+      "/items/homemade-chocolate.jpeg"
     ]
   },
 
@@ -373,8 +373,8 @@
     ],
     "description": "Classic cookies in multiple flavours — perfect with evening tea.",
     "images": [
-      "/items/teatime-cookies.jpeg",
-      "/items/teatime-cookies2.jpeg"
+      "/items/teatime-cookies2.jpeg",
+      "/items/teatime-cookies.jpeg"
     ] 
   },
 
@@ -447,7 +447,24 @@
     ],
     "description": "Light and crispy poha-based namkeen — a regional favourite.",
     "image": "/items/cornchese-masala-nachos.jpeg"
+  },
+  {
+    "id": 27,
+    "category": "Cakes",
+    "name": "CupCakes",
+    "variants": [
+      { "label": "Each", "price": 70 }
+    ],
+    "flavours": [
+      { "label": "Chocolate" },
+      { "label": "Pineapple" },
+      { "label": "Mango" },
+      { "label": "Red Velvet" }
+    ],
+    "description": "Light and crispy poha-based namkeen — a regional favourite.",
+    "image": "/items/cupcakes.jpg"
   }
+  
 ]
 
     
