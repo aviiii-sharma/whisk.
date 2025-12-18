@@ -96,6 +96,34 @@ body {
   font-size: 1.1rem;
 }
 
+/* ===== Home Sections ===== */
+
+.home-section {
+  margin-bottom: 2.5rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-header h2 {
+  font-size: 1.3rem;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+
 /* --- Menu Grid --- */
 .menu-grid {
   display: grid;
@@ -168,6 +196,67 @@ body {
   background: #f4f4f4;
   color: #555;
 }
+
+/* ===== Info Sections ===== */
+
+.info-section {
+  background: #fff;
+  padding: 1.4rem;
+  border-radius: 14px;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.info-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.info-section ul,
+.info-section ol {
+  padding-left: 1.2rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.info-section li {
+  margin-bottom: 0.5rem;
+}
+
+.info-section.highlight {
+  background: rgba(255, 107, 53, 0.08);
+}
+
+/* ===== Products Page Category Tabs ===== */
+
+.category-tabs {
+  display: flex;
+  gap: 0.6rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.category-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.category-tab {
+  white-space: nowrap;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1.5px solid #ddd;
+  background: white;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.category-tab.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
 
 /* generic buttons */
 .primary-btn,

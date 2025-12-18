@@ -25,6 +25,7 @@
   {
     "id": 2,
     "category": "Cakes",
+    "isBestSeller": true,
     "name": "EggLess Cakes",
     "variants": [
       { "label": "250g", "price": 275 },
@@ -134,6 +135,7 @@
   {
     "id": 7,
     "category": "Namkeen",
+    "isBestSeller": true,
     "name": "Poha Namkeen",
     "variants": [
       { "label": "250g", "price": 85 },
@@ -333,7 +335,8 @@
   {
     "id": 20,
     "category": "Sweets",
-    "name": "Barfi & Chocolate Bites",
+    "isBestSeller": true,
+    "name": "Chocolate Bites",
     "variants": [
       { "label": "250g", "price": 240 },
       { "label": "500g", "price": 460 },
@@ -359,6 +362,7 @@
   {
     "id": 21,
     "category": "Cookies",
+    "isBestSeller": true,
     "name": "Tea-Time Cookies",
     "variants": [
       { "label": "250g", "price": 150 },
@@ -451,6 +455,7 @@
   {
     "id": 27,
     "category": "Cakes",
+    "isBestSeller": true,
     "name": "CupCakes",
     "variants": [
       { "label": "Each", "price": 70 }

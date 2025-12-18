@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Routes, Route, Navigate, useParams, useNavigate } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  Navigate,
+  useParams,
+  useNavigate,
+} from "react-router-dom";
+
 import "./App.css";
 
 import Navbar from "./components/Navbar";
@@ -7,50 +14,49 @@ import Hero from "./components/Hero";
 import MenuCard from "./components/MenuCard";
 import CartDrawer from "./components/CartDrawer";
 import ItemDetail from "./components/ItemDetail";
+import ProductsPage from "./pages/ProductsPage";
+
 
 import menuData from "./data/menu.json";
 
 const VENDOR_WHATSAPP_NUMBER = "918960464391";
 
-/**
- * Main category config:
- * - id: used in URL (/category/:id)
- * - label: text shown on category card
- * - description: subtitle
- * - matchCategories: values from menu.json `category` field
- */
+/* ===================== CATEGORY CONFIG ===================== */
+
 export const CATEGORY_CONFIG = [
   {
     id: "cakes",
-    label: "Cakes & Jar Cakes",
-    description: "Birthday cakes, jar cakes, bento cakes & more.",
-    matchCategories: ["Cakes", "Pastry","Jar Cakes", "Custom Cakes", "Dry Cakes & Misc", "Specials"]
+    label: "Cakes & Desserts",
+    description: "Birthday cakes, jar cakes & desserts",
+    matchCategories: ["Cakes", "Jar Cakes", "Dry Cakes & Misc", "Specials"],
+  },
+  {
+    id: "sweets",
+    label: "Traditional Sweets",
+    description: "Ladoo, barfi & festive sweets",
+    matchCategories: ["Sweets", "Sweets (Ladoo)"],
+  },
+  {
+    id: "cookies",
+    label: "Cookies & Biscuits",
+    description: "Tea time cookies & baked snacks",
+    matchCategories: ["Cookies"],
   },
   {
     id: "namkeen",
     label: "Namkeen & Snacks",
-    description: "Crispy, savoury snacks for every mood.",
-    matchCategories: ["Namkeen", "Savory Snacks"]
-  },
-  {
-    id: "sweets",
-    label: "Sweets & Ladoo",
-    description: "Traditional laddoos, barfi and festive sweets.",
-    matchCategories: ["Sweets", "Sweets (Ladoo)"]
-  },
-  {
-    id: "cookies",
-    label: "Cookies",
-    description: "Tea-time favourites in many flavours.",
-    matchCategories: ["Cookies"]
+    description: "Savory & crunchy snacks",
+    matchCategories: ["Namkeen", "Savory Snacks"],
   },
   {
     id: "gifts",
-    label: "Custom Cakes & Gift Packs",
-    description: "Curated boxes for festivals & occasions.",
-    matchCategories: ["Misc & Gift Packs"]
-  }
+    label: "Gift Packs",
+    description: "Assorted gift boxes",
+    matchCategories: ["Misc & Gift Packs"],
+  },
 ];
+
+/* ===================== APP ===================== */
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -60,44 +66,40 @@ function App() {
     address: "",
   });
 
-  // Add Item with selected variant + quantity
-  const addToCart = (product, variant, quantity = 1, flavourLabel = null) => {
-  const keyParts = [product.id, variant.label, flavourLabel].filter(Boolean);
-  const cartItemId = keyParts.join("-");
+  /* ---------- CART LOGIC ---------- */
+
+  const addToCart = (product, variant, quantity, flavourLabel = null) => {
+    const id = `${product.id}-${variant.label}-${flavourLabel || "default"}`;
 
     setCart((prev) => {
-      const existing = prev.find((i) => i.id === cartItemId);
+      const existing = prev.find((i) => i.id === id);
       if (existing) {
         return prev.map((i) =>
-          i.id === cartItemId
-            ? { ...i, quantity: i.quantity + quantity }
-            : i
+          i.id === id ? { ...i, quantity: i.quantity + quantity } : i
         );
-      } else {
-        return [
-          ...prev,
-          {
-            id: cartItemId,
-            productId: product.id,
-            name: product.name,
-            variantLabel: variant.label,
-            flavourLabel: flavourLabel,
-            unitPrice: variant.price,
-            quantity,
-          },
-        ];
       }
+
+      return [
+        ...prev,
+        {
+          id,
+          name: product.name,
+          variantLabel: variant.label,
+          flavourLabel,
+          unitPrice: variant.price,
+          quantity,
+        },
+      ];
     });
 
-    setIsCartOpen(true); // open cart after adding
+    setIsCartOpen(true);
   };
 
-  // Update quantity in cart (by cart item id)
-  const updateQuantity = (cartItemId, delta) => {
+  const updateQuantity = (id, delta) => {
     setCart((prev) =>
       prev
         .map((item) =>
-          item.id === cartItemId
+          item.id === id
             ? { ...item, quantity: Math.max(0, item.quantity + delta) }
             : item
         )
@@ -105,8 +107,8 @@ function App() {
     );
   };
 
-  const removeFromCart = (cartItemId) => {
-    setCart((prev) => prev.filter((item) => item.id !== cartItemId));
+  const removeFromCart = (id) => {
+    setCart((prev) => prev.filter((item) => item.id !== id));
   };
 
   const total = cart.reduce(
@@ -114,24 +116,28 @@ function App() {
     0
   );
 
-  // WhatsApp Logic
   const handleCheckout = () => {
     if (cart.length === 0) return;
 
-    let message = `*New Order Request* %0A%0A`;
+    let message = "*New Order Request*%0A%0A";
+
     cart.forEach((item) => {
-  const flavourText = item.flavourLabel ? `, ${item.flavourLabel}` : "";
-  message += `• ${item.quantity} x ${item.name}${flavourText} (${item.variantLabel}) - ₹${
-    item.unitPrice * item.quantity
-  }%0A`;
-});
+      const flavourText = item.flavourLabel
+        ? ` (${item.flavourLabel})`
+        : "";
+      message += `• ${item.quantity} x ${item.name}${flavourText} - ₹${
+        item.unitPrice * item.quantity
+      }%0A`;
+    });
 
-    message += `%0A*Total: ₹${total}* %0A%0A`;
-    message += `*Name:* ${customerDetails.name || "N/A"}%0A`;
-    message += `*Details:* ${customerDetails.address || "N/A"}%0A`;
+    message += `%0A*Total: ₹${total}*%0A`;
+    message += `Name: ${customerDetails.name || "N/A"}%0A`;
+    message += `Address: ${customerDetails.address || "N/A"}`;
 
-    const url = `https://wa.me/${VENDOR_WHATSAPP_NUMBER}?text=${message}`;
-    window.open(url, "_blank");
+    window.open(
+      `https://wa.me/${VENDOR_WHATSAPP_NUMBER}?text=${message}`,
+      "_blank"
+    );
   };
 
   return (
@@ -139,25 +145,30 @@ function App() {
       <Navbar cartCount={cart.length} toggleCart={() => setIsCartOpen(true)} />
 
       <Routes>
-        {/* Home + category view */}
-        <Route
-          path="/"
-          element={<HomePage menuData={menuData} />}
-        />
-        <Route
-          path="/category/:categoryId"
-          element={<HomePage menuData={menuData} />}
-        />
+  {/* HOME */}
+  <Route path="/" element={<HomePage menuData={menuData} />} />
 
-        {/* Item detail page */}
-        <Route
-          path="/item/:itemId"
-          element={<ItemPage menuData={menuData} addToCart={addToCart} />}
-        />
+  {/* CATEGORY */}
+  <Route
+    path="/category/:categoryId"
+    element={<HomePage menuData={menuData} />}
+  />
 
-        {/* Fallback */}
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
+  {/* ALL PRODUCTS PAGE */}
+  <Route
+    path="/products"
+    element={<ProductsPage menuData={menuData} />}
+  />
+
+  {/* ITEM DETAIL */}
+  <Route
+    path="/item/:itemId"
+    element={<ItemPage menuData={menuData} addToCart={addToCart} />}
+  />
+
+  {/* FALLBACK */}
+  <Route path="*" element={<Navigate to="/" replace />} />
+</Routes>
 
       <CartDrawer
         isOpen={isCartOpen}
@@ -174,18 +185,21 @@ function App() {
   );
 }
 
-/* ------------ Home Page (list + categories) ------------ */
+/* ===================== HOME PAGE ===================== */
 
 function HomePage({ menuData }) {
   const { categoryId } = useParams();
   const navigate = useNavigate();
 
-  const activeCategoryId = categoryId || null;
-  const activeCategoryConfig = activeCategoryId
-    ? CATEGORY_CONFIG.find((c) => c.id === activeCategoryId)
+  const activeCategoryConfig = categoryId
+    ? CATEGORY_CONFIG.find((c) => c.id === categoryId)
     : null;
 
-  // Filter visible items based on selected category
+  const bestSellers =
+    menuData.filter((i) => i.isBestSeller).length > 0
+      ? menuData.filter((i) => i.isBestSeller).slice(0, 6)
+      : menuData.slice(0, 6);
+
   let visibleItems = menuData;
   if (activeCategoryConfig) {
     visibleItems = menuData.filter((item) =>
@@ -193,97 +207,54 @@ function HomePage({ menuData }) {
     );
   }
 
-  const currentHeading =
-    activeCategoryConfig?.label || "All items";
-
   return (
     <>
-      <Hero />
+      {!categoryId && <Hero />}
 
       <main className="container">
-        <CategorySection
-          activeId={activeCategoryId}
-          onSelect={(id) => {
-            if (id === activeCategoryId) {
-              navigate("/"); // toggle off, show all
-            } else {
-              navigate(`/category/${id}`);
-            }
-          }}
-        />
+        {/* HOME VIEW */}
+        {!categoryId && (
+          <>
+            <section className="home-section">
+              <div className="section-header">
+                <h2>Best Sellers ⭐</h2>
+                <button
+  className="link-btn"
+  onClick={() => navigate("/products")}
+>
+  View all →
+</button>
 
-        <section id="menu-section">
-          <h2 style={{ marginBottom: "1.5rem" }}>{currentHeading}</h2>
-          <div className="menu-grid">
-            {visibleItems.map((item) => (
-              <MenuCard key={item.id} item={item} />
-            ))}
-            {visibleItems.length === 0 && (
-              <p style={{ color: "#777" }}>
-                No items found in this category yet.
-              </p>
-            )}
-          </div>
-        </section>
+
+              </div>
+
+              <div className="menu-grid">
+                {bestSellers.map((item) => (
+                  <MenuCard key={item.id} item={item} />
+                ))}
+              </div>
+            </section>
+
+            
+            <WhatsAppInfo />
+          </>
+        )}
+
+        {/* CATEGORY VIEW */}
+        
       </main>
     </>
   );
 }
 
-function CategorySection({ activeId, onSelect }) {
-  return (
-    <section className="category-section">
-      <h2 className="section-title">Browse by category</h2>
-      <div className="category-grid">
-        {CATEGORY_CONFIG.map((cat) => (
-          <button
-            key={cat.id}
-            type="button"
-            className={
-              "category-card" +
-              (cat.id === activeId ? " category-card-active" : "")
-            }
-            onClick={() => onSelect(cat.id)}
-          >
-            <div className="category-card-content">
-              <h3>{cat.label}</h3>
-              <p>{cat.description}</p>
-            </div>
-          </button>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-/* ------------ Item Page (detail) ------------ */
+/* ===================== ITEM PAGE ===================== */
 
 function ItemPage({ menuData, addToCart }) {
   const { itemId } = useParams();
   const navigate = useNavigate();
 
-  const idNum = Number(itemId);
-  const item = menuData.find((i) => i.id === idNum);
-
-  if (!item) {
-    return (
-      <main className="container">
-        <div style={{ padding: "2rem 0" }}>
-          <button
-            className="back-link"
-            type="button"
-            onClick={() => navigate(-1)}
-          >
-            ← Back
-          </button>
-          <h2>Item not found</h2>
-          <p style={{ marginTop: "0.5rem" }}>
-            This product doesn&apos;t exist or was removed.
-          </p>
-        </div>
-      </main>
-    );
-  }
+  const item = menuData.find((i) => i.id === Number(itemId));
+  if (!item) return <Navigate to="/" replace />;
 
   return (
     <main className="container">
@@ -293,6 +264,21 @@ function ItemPage({ menuData, addToCart }) {
         onBack={() => navigate(-1)}
       />
     </main>
+  );
+}
+
+/* ===================== EXTRA SECTIONS ===================== */
+
+
+function WhatsAppInfo() {
+  return (
+    <section className="info-section highlight">
+      <h2>Order Confirmation</h2>
+      <p>
+        All orders are confirmed directly on WhatsApp. Delivery and payment
+        details are handled personally by the vendor.
+      </p>
+    </section>
   );
 }
 
